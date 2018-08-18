@@ -3,8 +3,12 @@
     .result__header
       %h2 あなたのミーハー度は
     .result__point
-      %h1 500000
+      %h1
+        =@point
     .result__discription
-      %p ああああああああああああああああああああああ！！
+      =@comment
+
+    %p みんなの履歴
 .result__log
-  =render partial: "log", collection: @logs
+  -@logs.each do |log|
+    =render partial: "log",locals: { log1: log}

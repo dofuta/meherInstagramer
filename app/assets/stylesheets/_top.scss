@@ -9,7 +9,7 @@
 }
 
 .main{
-  height: 85vh;
+  height: 50vh;
   width: 40vw;
   margin-top: 50px;
   background-color: $red2;
@@ -27,9 +27,11 @@
     color: white;
 
   }
-  &__typeArea{
-    font-size: 20px;
-    width: 50%;
+  &__imageArea{
+    width: 100px;
+    height: 100px;
+    background-color: $red4;
+    margin: 10px;
 
   }
   &__sendButton{
@@ -46,5 +48,6 @@
     // 中身の要素横方向中央寄せ
     justify-content: center;
     border: none;
+    border-radius: 10px;
   }
 }

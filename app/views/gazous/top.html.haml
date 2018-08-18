@@ -4,6 +4,9 @@
       %h1 ミーハー度判定
     .main__discription
       %p InstaGgramの投稿のURLを入力すると、ミーハー度あああああ
-    =form_tag('/result', method: :post) do
-      %input{class: "main__typeArea", placeholder:"URLを入力してください", type:"text", name:"image_url"}
+    =form_tag('/result', method: :post, multipart: true) do
+      %label.main__imageArea{for: "filearea"}
+        =file_field_tag :image
+        -# %input{id:"filearea", placeholder:"URLを入力してください", type:"file", name:"image", style: "cursor:pointer"}
       %input{class:"main__sendButton", type:"submit", value:"SENT", style: "cursor:pointer"}
+    = image_tag "syasin.jpg"
